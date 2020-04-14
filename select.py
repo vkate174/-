@@ -1,14 +1,19 @@
-def select_sort_stable(arr):
-    if(len(arr) == 0): return
-    for j in xrange(len(arr)):
-        min = j
-        for i in xrange(j+1, len(arr)):
-            if(arr[i] < arr[min]): min = i
-        if(min !=j):
-            value = arr[min]
-            for 1 in xrange(min,j-1,-1):
-                arr[I] = arr[I-1]
-                arr[j] = value
- random = [9,10,47,20]
- select_sort_stable(random)
- print(random)
+from random import randint
+ 
+ 
+def sel_sort(array):
+    for i in range(len(array) - 1):
+        m = i
+        j = i + 1
+        while j < len(array):
+            if array[j] < array[m]:
+                m = j
+            j = j + 1
+        array[i], array[m] = array[m], array[i]
+ 
+ 
+import random
+arry = [random.randint(0, 2600) for i in range(2600)]
+print(arry)
+sel_sort(arry)
+print(arry)
