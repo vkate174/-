@@ -1,3 +1,4 @@
+  
 def insertion_sort(array): 
     length = len(array) 
     for i in range(1, length):
@@ -8,7 +9,7 @@ def insertion_sort(array):
             j = j - 1
         array[j] = key
 import random
-arry = [random.randint(0, 2600) for i in range(2600)]
+arry = [random.randint(1, 999) for i in range(100)]
 print(arry)
 insertion_sort(arry)
-print(arry)    
+print(arry)  
