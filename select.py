@@ -13,7 +13,7 @@ def sel_sort(array):
  
  
 import random
-arry = [random.randint(0, 2600) for i in range(2600)]
+arry = [random.randint(1, 999) for i in range(100)]
 print(arry)
 sel_sort(arry)
 print(arry)
