@@ -1,15 +1,19 @@
-  
-def insertion_sort(array): 
-    length = len(array) 
-    for i in range(1, length):
-        key = array[i]
-        j = i
-        while (j - 1 >= 0) and (array[j - 1] > key):
-            array[j - 1], array[j] = array[j], array[j - 1]
-            j = j - 1
-        array[j] = key
+def insert(arr, dim):
+    alg_count = [0, 0]
+
+    for i in range(1, dim):
+        temp = arr[i]
+        j = i - 1
+        while j >= 0:
+            alg_count[0] += 1
+            if arr[j] > temp:
+                alg_count[1] += 1
+                arr[j + 1] = arr[j]
+                arr[j] = temp
+            j -= 1
+    print(alg_count)
 import random
-arry = [random.randint(1, 999) for i in range(100)]
+arry = [random.randint(0, 1000) for i in range(1000)]
 print(arry)
-insertion_sort(arry)
-print(arry)  
+insert(arry, len(arry))
+print(arry)
