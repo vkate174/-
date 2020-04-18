@@ -1,18 +1,15 @@
-from random import randint
- 
-def bubble(array):
-    for i in range(N-1):
-        for j in range(N-i-1):
-            if array[j] > array[j+1]:
-                buff = array[j]
-                array[j] = array[j+1]
-                array[j+1] = buff
- 
-N = 100
-a = []
-for i in range(N):
-    a.append(randint(1, 999))
- 
-print(a)
-bubble(a)
-print(a)
+def bubble(arr, dim):
+  alg_count = [0, 0]  # Массив для показателей эффективности
+  for i in range(dim - 1):  # Основной цикл для всех элементов
+   for j in range(dim - i - 1):  # Цикл для оставшейся части меньших элементов
+     alg_count[0] += 1
+     if arr[j] > arr[j + 1]:  # Сравниваем элементы
+       arr[j], arr[j + 1] = arr[j + 1], arr[j]  # Меняем элементы местами
+       alg_count[1] += 1
+  return alg_count
+
+import random
+arry = [random.randint(0, 100) for i in range(10)]
+print(arry)
+bubble(arry, len(arry))
+print(arry)
