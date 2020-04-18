@@ -9,7 +9,7 @@ def bubble(arr, dim):
   return alg_count
 
 import random
-arry = [random.randint(0, 100) for i in range(10)]
+arry = [random.randint(0, 1000) for i in range(1000)]
 print(arry)
 bubble(arry, len(arry))
 print(arry)
