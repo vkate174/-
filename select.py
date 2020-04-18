@@ -14,7 +14,7 @@ def select(arr, dim):
      alg_count[1] += 1
      return alg_count
 import random
-arry = [random.randint(0, 10) for i in range(10)]
+arry = [random.randint(0, 1000) for i in range(1000)]
 print(arry)
 select(arry, len(arry))
 print(arry)
