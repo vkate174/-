@@ -1,19 +1,20 @@
-from random import randint
- 
- 
-def sel_sort(array):
-    for i in range(len(array) - 1):
-        m = i
-        j = i + 1
-        while j < len(array):
-            if array[j] < array[m]:
-                m = j
-            j = j + 1
-        array[i], array[m] = array[m], array[i]
- 
- 
+def select(arr, dim):
+ alg_count = [0, 0]
+ for k in range(0, dim - 1):  # -1, т.к. последний элемент обменивать уже не надо
+   m = k  # в m хранится минимальное значение
+   i = k + 1  # откуда начинать поиск минимума (элемент следующий за k)
+   for i in range(i, dim):
+     alg_count[0] += 1
+     if arr[i] < arr[m]:
+       m = i
+       if k != m:
+         t = arr[k]
+     arr[k] = arr[m]
+     arr[m] = t
+     alg_count[1] += 1
+     return alg_count
 import random
-arry = [random.randint(1, 999) for i in range(100)]
+arry = [random.randint(0, 10) for i in range(10)]
 print(arry)
-sel_sort(arry)
+select(arry, len(arry))
 print(arry)
